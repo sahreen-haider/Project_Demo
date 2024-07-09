@@ -17,11 +17,12 @@
 
 ###### Pillow: A powerful image processing library for opening, manipulating, and saving various image file formats.
 
+### Pre-requisites
+##### model access token from huggingface [SOURCE](https://huggingface.co/settings/tokens)
 
 ### start with running the command below, which will install all the necessary packages.
 ```
 pip install -r requirements.txt
 ```
 
-#### Pre-requisites
-##### model access token from huggingface [SOURCE](https://huggingface.co/settings/tokens)
+
