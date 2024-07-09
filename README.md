@@ -1,6 +1,9 @@
 ﻿# Project_Demo
 
-#### This project aims to show the capabilities of Generative AI specifically Diffusion Models
+#### This project aims to show the capabilities of Generative AI specifically Diffusion Models.
+**This project uses technologies like diffusion models(stable diffusion xl) using huggingface via serverless inference.
+and the project uses several other technologies such as python, streamlit, not that to make this project work, you need 
+a access token key from huggingface to run the model using inference** 
 
 ##### Technologies and package's used in the project
 
