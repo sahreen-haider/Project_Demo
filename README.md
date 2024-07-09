@@ -5,7 +5,10 @@
 ##### Technologies used in the project
 ```
 python
+python-dotenv
 matplotlib
 streamlit
-hugging face 
+hugging face
+pillow
 ```
+
