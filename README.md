@@ -3,24 +3,24 @@
 #### This project aims to show the capabilities of Generative AI specifically Diffusion Models.
 
 **This project uses technologies like diffusion models(stable diffusion xl) using huggingface via serverless inference.
-the project uses several other technologies such as python, streamlit etc. all of these are mentioned below with their breif description,
+the project uses several other technologies such as python, streamlit etc. all of these are mentioned below with their breif description with links to their documentation embedded,
 To make this project work, you need to get
 a access token or generate one from huggingface to run the model using inference** 
 
 ##### Technologies and package's used in the project
 
 
-###### Python: A versatile programming language known for readability and broad library support, used in web development, data analysis, and AI.
+###### (Python)[https://docs.python.org/3/]: A versatile programming language known for readability and broad library support, used in web development, data analysis, and AI.
 
-###### python-dotenv: A library to load environment variables from a `.env` file, aiding in configuration management and security.
+###### (python-dotenv)[https://pypi.org/project/python-dotenv/]: A library to load environment variables from a `.env` file, aiding in configuration management and security.
 
-###### matplotlib: A library for creating static, animated, and interactive visualizations in Python, widely used for plotting graphs and charts.
+###### (matplotlib)[https://matplotlib.org/]: A library for creating static, animated, and interactive visualizations in Python, widely used for plotting graphs and charts.
 
-###### streamlit: An open-source framework for quickly creating interactive web apps from Python scripts, ideal for data science and machine learning.
+###### (streamlit)[https://docs.streamlit.io/]: An open-source framework for quickly creating interactive web apps from Python scripts, ideal for data science and machine learning.
 
-###### Hugging Face: Provides tools and pre-trained models for natural language processing, including the popular `transformers` library.
+###### (Hugging Face)[https://huggingface.co/docs]: Provides tools and pre-trained models for natural language processing, including the popular `transformers` library.
 
-###### Pillow: A powerful image processing library for opening, manipulating, and saving various image file formats.
+###### (Pillow)[https://pillow.readthedocs.io/en/stable/]: A powerful image processing library for opening, manipulating, and saving various image file formats.
 
 ### Pre-requisites
 ##### model access token from huggingface [SOURCE](https://huggingface.co/settings/tokens)
