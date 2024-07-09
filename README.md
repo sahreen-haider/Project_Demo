@@ -18,3 +18,7 @@ Hugging Face: Provides tools and pre-trained models for natural language process
 Pillow: A powerful image processing library for opening, manipulating, and saving various image file formats.
 ```
 
+### start with running the command below, which will install all the necessary packages.
+```
+pip install -r requirements.txt
+```
