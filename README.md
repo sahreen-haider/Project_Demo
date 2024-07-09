@@ -5,7 +5,7 @@
 **This project uses technologies like diffusion models(stable diffusion xl) using huggingface via serverless inference.
 the project uses several other technologies such as python, streamlit etc. all of these are mentioned below with their breif description,
 To make this project work, you need to get
-a access token key from huggingface to run the model using inference** 
+a access token or generate one from huggingface to run the model using inference** 
 
 ##### Technologies and package's used in the project
 
