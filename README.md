@@ -24,5 +24,9 @@
 ```
 pip install -r requirements.txt
 ```
+### running the model on your local machine, execute the below code in your terminal
+```
+streamlit run webapp.py
+```
 
 
