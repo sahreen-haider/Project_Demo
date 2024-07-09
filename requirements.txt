@@ -1,5 +1,7 @@
 pillow
 matplotlib
 python-dotenv
+streamlit
+requests
 
 # - e
