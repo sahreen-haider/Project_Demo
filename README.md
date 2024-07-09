@@ -24,4 +24,4 @@ pip install -r requirements.txt
 ```
 
 #### Pre-requisites
-##### model access token from huggingface [https://huggingface.co/settings/tokens]
+##### model access token from huggingface [SOURCE](https://huggingface.co/settings/tokens)
