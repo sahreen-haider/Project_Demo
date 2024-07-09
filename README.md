@@ -34,4 +34,7 @@ pip install -r requirements.txt
 streamlit run webapp.py
 ```
 
+**the webapp is also live, you can access it using the link below:**
+https://stable-diffusion.streamlit.app/
+
 
