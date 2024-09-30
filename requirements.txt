@@ -1,9 +1,10 @@
-pillow
-matplotlib
-python-dotenv
-streamlit
-requests
-openai
-audio_recorder_streamlit
-streamlit-float
+pillow==10.4.0
+matplotlib==3.9.2
+python-dotenv==1.0.1
+streamlit==1.38.0
+requests==2.32.3
+openai==1.50.2
+audio-recorder-streamlit==0.0.10
+streamlit-float==0.3.5
+
 # - e
