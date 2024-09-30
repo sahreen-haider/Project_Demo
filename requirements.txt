@@ -3,5 +3,7 @@ matplotlib
 python-dotenv
 streamlit
 requests
-
+openai
+audio_recorder_streamlit
+streamlit-float
 # - e

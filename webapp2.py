@@ -3,11 +3,17 @@ import streamlit as st
 import io
 from PIL import Image
 from diffusion import *
+from voice import speech_to_text
+from audio_recorder_streamlit import audio_recorder
+from streamlit_float import *
+
 
 # setting the title of web app
 st.title("Image Generator")
-
-# inserting the query here
+# Create footer container for the microphone
+footer_container = st.container()
+with footer_container:
+    audio_bytes = audio_recorder()
 ingested_query = st.text_input("Please enter your query here: ")
 
 
