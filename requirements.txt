@@ -7,4 +7,8 @@ openai==1.50.2
 audio-recorder-streamlit==0.0.10
 streamlit-float==0.3.5
 watchdog
+transformers==4.45.2
+torch==2.5.0
+
+
 # - e
