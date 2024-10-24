@@ -8,7 +8,7 @@ from audio_recorder_streamlit import audio_recorder
 import os
 from caption_generator import caption_generator  # Import the caption generator function
 import tempfile
-from feature_extractor import query as feature_extractor_query  # Import the query function for feature extraction
+from feature_extractor import feature_extractor as feature_extractor_query  # Import the query function for feature extraction
 
 # Initialize session state for messages if it doesn't exist
 if "messages" not in st.session_state:
