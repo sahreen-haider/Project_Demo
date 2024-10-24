@@ -7,6 +7,8 @@ from voice import speech_to_text
 from audio_recorder_streamlit import audio_recorder
 import os
 from caption_generator import caption_generator  # Import the caption generator function
+import tempfile
+from feature_extractor import query as feature_extractor_query  # Import the query function for feature extraction
 
 # Initialize session state for messages if it doesn't exist
 if "messages" not in st.session_state:
@@ -20,7 +22,7 @@ st.title("AI Application")
 # Create a radio button to choose between pages
 page_selection = st.sidebar.radio(
     "Choose a Page",
-    ("Image Generator", "Caption Generator")
+    ("Image Generator", "Caption Generator", "Feature Extractor")  # Added Feature Extractor option
 )
 
 # Function to reset session messages
@@ -119,5 +121,54 @@ elif page_selection == "Caption Generator":
         # Generate caption using the caption_generator function
         if st.button("Generate Caption"):
             with st.spinner("Generating caption..."):
-                caption = caption_generator(image)  # Call the caption generator function
-                st.write(f"**Generated Caption:** {caption}")
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as temp_file:
+                    image.save(temp_file.name)
+                    temp_filename = temp_file.name
+                caption_response = caption_generator(temp_filename)  # Call the caption generator function
+                # Extract the generated text from the response
+                caption_text = caption_response[0].get('generated_text',
+                                                       'No caption generated')  # Safely extract caption
+
+                st.write(f"**Generated Caption:** {caption_text}")
+
+
+# Page 3: Feature Extractor
+elif page_selection == "Feature Extractor":
+    st.header("Feature Extractor")
+
+    # Image upload for feature extraction
+    uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+
+    if uploaded_image is not None:
+        # Load the uploaded image using PIL
+        image = Image.open(uploaded_image)
+
+        # Display the uploaded image
+        st.image(image, caption="Uploaded Image", use_column_width=True)
+
+        # Feature extraction using the feature_extractor function
+        if st.button("Extract Features"):
+            with st.spinner("Extracting features..."):
+                # Save the uploaded image to a temporary file
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as temp_file:
+                    image.save(temp_file.name)
+                    temp_filename = temp_file.name
+
+                # Query the feature extractor model
+                feature_response = feature_extractor_query(temp_filename)
+
+                # Debugging: Print the response to check its structure
+                st.write("Feature Response:", feature_response)
+
+                # Ensure that the response is a list of dictionaries
+                if isinstance(feature_response, list):
+                    try:
+                        # Extract the labels from the response
+                        labels = [item.get('label', 'Unknown') for item in feature_response]
+
+                        # Display the extracted labels
+                        st.write(f"**Extracted Labels:** {', '.join(labels)}")
+                    except (KeyError, TypeError) as e:
+                        st.error(f"Error processing the response: {e}")
+                else:
+                    st.error("The response is not in the expected format. Please check the API output.")
